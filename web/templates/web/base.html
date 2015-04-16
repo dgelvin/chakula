@@ -3,9 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    {% bootstrap_css %}
-    {% bootstrap_javascript jquery=True %}
-    <script src="{% static '/web/static/jquery.noty.packaged.min.js' %}"></script>
+    {% block css %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="/web/static/flipclock/flipclock.css">
+    {% endblock css %}
+
+    {% block javascript %}
+        {% bootstrap_javascript jquery=True %}
+        <script src="{% static '/web/static/jquery.noty.packaged.min.js' %}"></script>
+        <script src="{% static '/web/static/flipclock/flipclock.min.js' %}"></script>
+    {% endblock javascript %}
+
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
 </head>

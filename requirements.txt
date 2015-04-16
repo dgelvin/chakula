@@ -1,0 +1,4 @@
+Django==1.8
+django-bootstrap3==5.3.1
+django-extensions==1.5.2
+uWSGI==2.0.10
