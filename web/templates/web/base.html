@@ -1,0 +1,16 @@
+{% load staticfiles %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery=True %}
+    <script src="{% static '/web/static/jquery.noty.packaged.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>
